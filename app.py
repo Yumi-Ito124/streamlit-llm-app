@@ -31,7 +31,7 @@ def ask_llm(user_input, role):
         SystemMessage(content=system_prompt),
         HumanMessage(content=user_input)
     ]
-    result = llm(messages)
+    result = llm.invoke(messages)
     return result.content
 
 # StreamlitアプリのUI
